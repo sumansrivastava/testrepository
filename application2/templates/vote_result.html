@@ -1,0 +1,23 @@
+<!-- templates/vote_result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Result</title>
+</head>
+<body>
+    <h1>Vote Result</h1>
+    <p>OTG: {{ vote_counts['OTG'] }}</p>
+    <p>Microwave: {{ vote_counts['Microwave'] }}</p>
+    <form method="POST" action="/vote">
+        <label for="vote_option">Vote:</label>
+        <select id="vote_option" name="vote_option">
+            <option value="OTG">OTG</option>
+            <option value="Microwave">Microwave</option>
+        </select>
+        <button type="submit">Submit Vote</button>
+    </form>
+</body>
+</html>
